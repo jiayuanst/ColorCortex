@@ -1132,5 +1132,25 @@ if __name__ == "__main__":
         
         # 确保程序不会立即退出
         pygame.quit()
-        input("按回车键退出...")
+        # 修复：使用更安全的方式等待用户输入
+        try:
+            print("按回车键退出...")
+            # 使用os.read代替input()，避免sys.stdin问题
+            if hasattr(os, 'read'):
+                os.read(0, 1)  # 从标准输入读取一个字节
+            else:
+                # 如果os.read不可用，尝试使用msvcrt（Windows特有）
+                try:
+                    import msvcrt
+                    msvcrt.getch()
+                except ImportError:
+                    # 如果都不可用，尝试使用input，但捕获可能的异常
+                    try:
+                        input()
+                    except:
+                        pass
+        except:
+            # 忽略任何可能的输入错误
+            pass
+            
         sys.exit(0)
