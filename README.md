@@ -19,3 +19,8 @@
 ### 困难
 提示颜色和位置正确的数量，已经使用5次猜测
 
+## 游戏截图
+![屏幕截图 2025-04-06 132145](https://github.com/user-attachments/assets/ce476e8e-a07f-4acc-a3a4-4b695a5e7a18)
+![屏幕截图 2025-04-06 132619](https://github.com/user-attachments/assets/dc4969fd-f8ce-4025-9aba-5c04657cdb8d)
+
+
